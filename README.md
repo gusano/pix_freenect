@@ -10,9 +10,9 @@ Tested with 2 Kinects, should work with more (on different usb controllers)
 
 
 (C) 2011/2012 by Matthias Kronlachner
-__________________________________________________________
 
-## Install
+
+### Install
 
 tested and compiled for Ubuntu 11.10 and MacOS 10.6.8 with Gem 0.93.3
 
@@ -23,25 +23,25 @@ use binaries from build folder or build yourself
  - get and install latest libfreenect from [https://github.com/OpenKinect/libfreenect](https://github.com/OpenKinect/libfreenect)
    (compile it with Audio support! see the tips at the end of this file)
 
-### Linux
+#### Linux
 
- - inside pix_freenect folder: `make PD_DIR=$HOME/dev/pure-data GEM_DIR=$HOME/dev/Gem`
+ - inside pix_freenect folder (change PD_DIR and GEM_DIR to your local paths): `make PD_DIR=$HOME/dev/pure-data GEM_DIR=$HOME/dev/Gem`
 
  - alternatively you can edit `Makefile`, change the paths to Gem and pd sources and run `make`
 
  - have a look at the pix_freenect-help.pd file!
 
-### OSX
+#### OSX
 
 Make sure that libfreenect.0.0.1.dylib and libusb-1.0.0.dylib provided in build folder are in the same folder than pix_freenect.pd_darwin!
 
- - inside pix_freenect folder: `make PD_DIR=$HOME/dev/pure-data GEM_DIR=$HOME/dev/Gem PD_APP_DIR=/Applications/Pd-extended.app/Contents/Resources`
+ - inside pix_freenect folder (change PD_DIR and GEM_DIR to your local paths): `make PD_DIR=$HOME/dev/pure-data GEM_DIR=$HOME/dev/Gem PD_APP_DIR=/Applications/Pd-extended.app/Contents/Resources`
 
  - alternatively you can edit `Makefile`, change the paths to Gem and pd sources and run `make`
 
  - have a look at the pix_freenect-help.pd file!
 
-## Changelog
+### Changelog
 
 0.04
  - open specific kinect by serial number -> external lists all available kinect sensors with serial number on startup
@@ -62,11 +62,11 @@ Make sure that libfreenect.0.0.1.dylib and libusb-1.0.0.dylib provided in build 
 0.02
  - compatibility to Gem 0.93
 
-## Known bugs
+### Known bugs
 
  - streams do not start automatically, have to be triggered by led change, tilt change or |accel( message
 
-## To do
+### To do
 
  - implement audio resampling in helpfile
  - pack audio into separate external, maybe motor and led control as well
@@ -74,9 +74,9 @@ Make sure that libfreenect.0.0.1.dylib and libusb-1.0.0.dylib provided in build 
 
 questions: `m.kronlachner@gmail.com`
 
-____________________________________________________________
 
-## Tips to build libfreenect
+
+### Tips to build libfreenect
 
  - `git clone git://github.com/OpenKinect/libfreenect.git`
  - `cd libfreenect`
